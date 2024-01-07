@@ -52,6 +52,14 @@ local lazy_plugins = {
             vim.cmd.colorscheme "catppuccin"
         end,
     },
+	{
+		'nvim-telescope/telescope.nvim', tag = '0.1.5',
+		-- or                              , branch = '0.1.x',
+		dependencies = { 'nvim-lua/plenary.nvim' }
+	},
+	"theprimeagen/harpoon",
+	"tpope/vim-fugitive",
+	"mbbill/undotree",
     {
 	"neovim/nvim-lspconfig",
 	dependencies = {
@@ -108,6 +116,18 @@ local lazy_plugins = {
 			},	{
 				{ name = 'buffer' },
 			})
+		})
+
+		vim.diagnostic.config({
+			update_in_insert = true,
+			float = {
+				focusable = false,
+				style = "minimal",
+				border = "rounded",
+				source = "always",
+				header = "",
+				prefix = "",
+			},
 		})
 
 	end
