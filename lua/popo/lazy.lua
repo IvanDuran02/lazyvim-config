@@ -43,14 +43,45 @@ local lazy_plugins = {
         config = function()
             require("catppuccin").setup({
                 -- Your catppuccin configuration here
-			color_overrides = {
-			mocha = {
-	   		  base = "#0a0a10"
-			}
-            	}
-	})
+                        color_overrides = {
+                        mocha = {
+                          base = "#0a0a10"
+                        }
+                }
+        })
             vim.cmd.colorscheme "catppuccin"
         end,
+    },
+    {
+	"neovim/nvim-lspconfig",
+	dependencies = {
+		"williamboman/mason.nvim",
+		"williamboman/mason-lspconfig.nvim",
+	},
+	config = function()
+		require("mason").setup()
+		require("mason-lspconfig").setup({
+			ensure_installed = {
+				"lua_ls",
+				"rust_analyzer",
+				"tsserver",
+				"eslint",
+				"gopls",
+				"golangci_lint_ls",
+				"html",
+				"marksman",
+				"pyre",
+				"tailwindcss",
+			},
+			handlers = {
+				function (server_name) -- default handler (optional)
+					require("lspconfig")[server_name].setup {
+						on_attach = attach
+					}
+				end,
+			}
+		})
+	end
     }
 }
 
