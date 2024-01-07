@@ -1,7 +1,5 @@
 # Personal neovim setup using lazy vim as package manager.
 
-- Using catppuccin theme along with lualine as statusline
-
 ## Main plugins used so far.
 
 - Treesitter
@@ -19,7 +17,7 @@
 - cmp
 - catppuccin
 
-#### Description of some of these plugins:
+### Description of some of these plugins:
 
 - tabout allows you to tab to exit brackets, quotes, etc...
 - autopair automatically closes a tag when you make it.
