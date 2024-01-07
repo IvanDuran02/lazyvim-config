@@ -20,7 +20,7 @@ local lazy_plugins = {
         autotag = {
           enable = true,
         },
-        ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "typescript", "javascript", "html", "tsx", "go", "rust" },
+        ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "typescript", "javascript", "html", "tsx", "go", "rust", "css" },
         highlight = { enable = true },
         indent = { enable = true },
       })
@@ -146,6 +146,7 @@ local lazy_plugins = {
           "golangci_lint_ls",
           "html",
           "marksman",
+          "cssls"
         },
         handlers = {
           function(server_name) -- default handler (optional)
