@@ -15,6 +15,7 @@
 - telescope
 - undotree
 - cmp
+- comment.nvim
 - catppuccin
 
 ### Description of some of these plugins:
@@ -28,4 +29,5 @@
 - harpoon helps navigate files, think replacement for tabs
 - undotree shows undo history and allows you to branch off past edits
 - cmp does cool auto complete stuff for code
+- comment.nvim allows me to map line and block commenting
 - catppuccin is my theme
