@@ -26,6 +26,20 @@ local lazy_plugins = {
     tag = '0.1.5',
     dependencies = { 'nvim-lua/plenary.nvim' }
   },
+  {
+    'numToStr/Comment.nvim',
+    opts = {
+      toggler = { -- Comments current line
+        line = '<C-_>',
+        block = '<C-b>'
+      },
+      opleader = { -- Can select block to comment
+        line = 'gc',
+        block = 'gb'
+      }
+    },
+    lazy = false,
+  }
 }
 
 -- Setting up lazy plugins
