@@ -8,7 +8,8 @@ return {
         autotag = {
           enable = true,
         },
-        ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "typescript", "javascript", "html", "tsx", "go", "rust", "css" },
+        ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "typescript", "javascript", "html", "tsx", "go", "rust", "css", "prisma" },
+
         highlight = { enable = true },
         indent = { enable = true },
       })
