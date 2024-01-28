@@ -20,6 +20,8 @@ local lazy_plugins = {
   "theprimeagen/harpoon",
   "tpope/vim-fugitive",
   "mbbill/undotree",
+  --[[ "NvChad/nvim-colorizer.lua",
+  "norcalli/nvim-colorizer.lua", ]] -- Not working for some reason...
   { "folke/neoconf.nvim", cmd = "Neoconf" },
   {
     'nvim-telescope/telescope.nvim',
