@@ -4,10 +4,10 @@
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
--- sets tabs to 4
-vim.opt.tabstop = 2 
-vim.opt.softtabstop = 2 
-vim.opt.shiftwidth = 2 
+-- sets tabs to 2
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 
 vim.opt.smartindent = true
