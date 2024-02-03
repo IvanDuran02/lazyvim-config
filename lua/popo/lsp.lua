@@ -31,7 +31,8 @@ return {
           "golangci_lint_ls",
           "html",
           "marksman",
-          "cssls"
+          "cssls",
+          "clangd" -- C++
         },
         handlers = {
           function(server_name) -- default handler (optional)
