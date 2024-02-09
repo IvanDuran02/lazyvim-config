@@ -17,12 +17,22 @@ local lazy_plugins = {
   require("popo.lsp"),
   "folke/which-key.nvim",
   "folke/neodev.nvim",
-  "theprimeagen/harpoon",
   "tpope/vim-fugitive",
   "mbbill/undotree",
   "norcalli/nvim-colorizer.lua",
   "NvChad/nvim-colorizer.lua",
-  { "folke/neoconf.nvim", cmd = "Neoconf" },
+  {
+    "theprimeagen/harpoon",
+    config = function ()
+    require("harpoon").setup({
+        global_settings = {
+          -- global configs
+          mark_branch = true;
+        }
+      })
+    end,
+  },
+  { "folke/neoconf.nvim",  cmd = "Neoconf" },
   {
     'nvim-telescope/telescope.nvim',
     tag = '0.1.5',
