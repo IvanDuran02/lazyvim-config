@@ -11,7 +11,6 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 local lazy_plugins = {
-  require("popo.treesitter"),
   require("popo.theme"),
   require("popo.formatting"),
   require("popo.lsp"),
