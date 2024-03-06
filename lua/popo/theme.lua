@@ -11,7 +11,7 @@ return {
             base = "#13131f" -- made the base color a bit darker [ #0a0a10 ]
           }
         },
-        --[[ transparent_background = false, -- disables setting the background color.
+        transparent_background = false, -- disables setting the background color.
         background = { -- :h background
           light = "latte",
           dark = "mocha",
@@ -23,7 +23,7 @@ return {
           shade = "light",
           percentage = 0.15,           -- percentage of the shade to apply to the inactive window
         },
-        custom_highlights = {}, ]]
+        custom_highlights = {},
         integrations = {
           cmp = true,
           dashboard = true,
