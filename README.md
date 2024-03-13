@@ -9,7 +9,7 @@
 - autopair
 - autotag
 - lualine
-- none-ls
+- Conform 
 - fugitive
 - harpoon
 - telescope
@@ -24,7 +24,7 @@
 - autopair automatically closes a tag when you make it.
 - autotag automatically closes html tags when you make it.
 - lualine adds cool ui for nvim statusline.
-- none-ls is used with prettierd (installed with treesitter) to auto format code on save and when hitting Space+f
+- Conform to replace none-ls for formatting
 - fugitive git stuff
 - harpoon helps navigate files, think replacement for tabs
 - undotree shows undo history and allows you to branch off past edits

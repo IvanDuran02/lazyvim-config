@@ -22,6 +22,7 @@ vim.keymap.set("v", "<leader>d", "\"_d")
 vim.keymap.set("n", "Q", "<nop>")
 -- for some reason this tmux keymap isn't working...
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+vim.bo.shiftwidth = 4
 vim.keymap.set("n", "<leader>f", function()
     vim.lsp.buf.format()
 end)

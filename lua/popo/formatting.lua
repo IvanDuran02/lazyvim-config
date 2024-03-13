@@ -1,35 +1,35 @@
 return {
     {
-        "nvimtools/none-ls.nvim",
-        event = "VeryLazy",
-        opts = function()
-            local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
-            local null_ls = require("null-ls")
-            null_ls.setup({
-                sources = {
-                    null_ls.builtins.formatting.prettierd,
-                },
-                on_attach = function(client, bufnr) -- Formats on save
-                    if client.supports_method("textDocument/formatting") then
-                        vim.api.nvim_clear_autocmds({
-                            group = augroup,
-                            buffer = bufnr,
-                        })
-                        vim.api.nvim_create_autocmd("BufWritePre", {
-                            group = augroup,
-                            buffer = bufnr,
-                            callback = function()
-                                vim.lsp.buf.format({ bufnr = bufnr })
-                            end,
-                        })
-                    end
-                end,
-            })
-        end,
+        {
+            'stevearc/conform.nvim',
+            config = function()
+                require("conform").setup({
+                    vim.api.nvim_create_autocmd("BufWritePre", {
+                        pattern = "*",
+                        callback = function(args)
+                            require("conform").format({ bufnr = args.buf })
+                        end,
+                    }),
+                    format_on_save = {
+                        -- These options will be passed to conform.format()
+                        timeout_ms = 500,
+                        lsp_fallback = true,
+                    },
+                    formatters_by_ft = {
+                        lua = { "stylua" },
+                        -- Conform will run multiple formatters sequentially
+                        python = { "isort", "black" },
+                        -- Use a sub-list to run only the first available formatter
+                        javascript = { { "prettierd", "prettier" } },
+                        go = { "goimports", "gofmt" },
+                    },
+                })
+            end
+        }
     },
     {
         "windwp/nvim-ts-autotag",
-        ft = { -- only runs this when file type is one of these.
+        ft = {
             "javascript",
             "javascriptreact",
             "typescript",
