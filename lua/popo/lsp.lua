@@ -1,5 +1,4 @@
 return {
-    "https://github.com/apple/pkl-neovim.git",
     {
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
@@ -9,8 +8,7 @@ return {
                 autotag = {
                     enable = true,
                 },
-                ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "typescript", "javascript", "html", "tsx", "go", "rust", "css", "prisma", "cpp", "pkl" },
-
+                ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "typescript", "javascript", "html", "tsx", "go", "rust", "css", "prisma", "cpp" },
                 highlight = { enable = true },
                 indent = { enable = true },
             })
