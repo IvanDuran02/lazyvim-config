@@ -36,7 +36,8 @@ return {
                         "eslint-lsp",
                         "tailwindcss-language-server",
                         "typescript-language-server",
-                    }
+                    },
+                    automatic_installation = true
                 }
             })
             require("mason-lspconfig").setup({
@@ -49,6 +50,7 @@ return {
                     "cssls",
                     "clangd", -- C++
                 },
+                automatic_installation = true,
                 handlers = {
                     function(server_name)
                         local nvim_lsp = require("lspconfig")
