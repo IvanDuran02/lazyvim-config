@@ -17,6 +17,7 @@ return {
     {
         "neovim/nvim-lspconfig",
         dependencies = {
+            "ThePrimeagen/vim-be-good",
             "williamboman/mason.nvim",
             "williamboman/mason-lspconfig.nvim",
             "hrsh7th/cmp-nvim-lsp",

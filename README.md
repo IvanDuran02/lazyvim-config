@@ -31,3 +31,17 @@
 - cmp does cool auto complete stuff for code
 - comment.nvim allows me to map line and block commenting
 - catppuccin is my theme
+
+### Personal notes:
+    Ctrl-w w - Move to other panel
+    Ctrl-w h - Move to the left panel
+    Ctrl-w j - Move to the panel below
+    Ctrl-w k - Move to the panel above
+    Ctrl-w l - Move to the right panel
+
+    Ctrl-w H - Move the left panel
+    Ctrl-w J - Move the panel below
+    Ctrl-w K - Move the panel above
+    Ctrl-w L - Move the right panel
+
+    Ctrl-o - Go back after using go-to def
