@@ -49,6 +49,7 @@ return {
                     "marksman",
                     "cssls",
                     "clangd", -- C++
+                    "zls"     -- Zig
                 },
                 automatic_installation = true,
                 handlers = {
