@@ -49,7 +49,8 @@ return {
                     "marksman",
                     "cssls",
                     "clangd", -- C++
-                    "zls"     -- Zig
+                    "zls",    -- Zig
+                    "pyright",
                 },
                 automatic_installation = true,
                 handlers = {

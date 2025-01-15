@@ -1,8 +1,18 @@
 return {
     {
+        { "WhoIsSethDaniel/mason-tool-installer.nvim"
+        },
         {
             'stevearc/conform.nvim',
             config = function()
+                require("mason-tool-installer").setup({
+                    ensure_installed = {
+                        "prettierd",    -- Example formatter
+                        "stylua",       -- Another formatter
+                        "black",        -- Python formatter
+                    },
+                    auto_update = true, -- Auto-update tools when opening Neovim
+                })
                 require("conform").setup({
                     vim.api.nvim_create_autocmd("BufWritePre", {
                         pattern = "*",
