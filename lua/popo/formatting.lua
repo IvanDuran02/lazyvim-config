@@ -9,6 +9,7 @@ return {
 						"prettierd", -- Example formatter
 						"stylua", -- Another formatter
 						"black", -- Python formatter
+						"clang-format",
 					},
 					auto_update = true, -- Auto-update tools when opening Neovim
 				})
@@ -19,18 +20,27 @@ return {
 							require("conform").format({ bufnr = args.buf })
 						end,
 					}),
+
 					format_on_save = {
 						-- These options will be passed to conform.format()
 						timeout_ms = 500,
 						lsp_fallback = true,
 					},
 					formatters_by_ft = {
+						cpp = { "my_formatter" },
 						lua = { "stylua" },
 						-- Conform will run multiple formatters sequentially
 						python = { "isort", "black" },
 						-- Use a sub-list to run only the first available formatter
 						javascript = { { "prettierd", "prettier" } },
 						go = { "goimports", "gofmt" },
+					},
+
+					formatters = {
+						my_formatter = {
+							command = "clang-format",
+							args = { "--style={BasedOnStyle: llvm, IndentWidth: 4, UseTab: Never, ColumnLimit: 80}" },
+						},
 					},
 				})
 			end,

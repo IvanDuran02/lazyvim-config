@@ -9,22 +9,23 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
 -- vim will replace clipboard if you select and paste, this keymap goes around it
-vim.keymap.set("x", "<leader>p", "\"_dP:")
+vim.keymap.set("x", "<leader>p", '"_dP:')
 
 -- copies to clipboard outside of vim
-vim.keymap.set("n", "<leader>y", "\"+y")
-vim.keymap.set("v", "<leader>y", "\"+y")
+vim.keymap.set("n", "<leader>y", '"+y')
+vim.keymap.set("v", "<leader>y", '"+y')
 vim.keymap.set("n", "<leader>Y", "\n+Y")
 
-vim.keymap.set("n", "<leader>d", "\"_d")
-vim.keymap.set("v", "<leader>d", "\"_d")
+vim.keymap.set("n", "<leader>d", '"_d')
+vim.keymap.set("v", "<leader>d", '"_d')
 
 vim.keymap.set("n", "Q", "<nop>")
 -- for some reason this tmux keymap isn't working...
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 vim.bo.shiftwidth = 4
+
 vim.keymap.set("n", "<leader>f", function()
-    vim.lsp.buf.format()
+	require("conform").format()
 end)
 
 -- leader + s will replace whatever cursor was on with input

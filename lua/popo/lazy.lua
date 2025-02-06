@@ -21,36 +21,40 @@ local lazy_plugins = {
 	"norcalli/nvim-colorizer.lua",
 	"NvChad/nvim-colorizer.lua",
 	{
+		"3rd/image.nvim",
+		opts = {},
+	},
+	{
 		"theprimeagen/harpoon",
 		config = function()
 			require("harpoon").setup({
 				global_settings = {
 					-- global configs
 					mark_branch = true,
-				}
+				},
 			})
 		end,
 	},
 	{ "folke/neoconf.nvim", cmd = "Neoconf" },
 	{
-		'nvim-telescope/telescope.nvim',
-		tag = '0.1.5',
-		dependencies = { 'nvim-lua/plenary.nvim' }
+		"nvim-telescope/telescope.nvim",
+		tag = "0.1.5",
+		dependencies = { "nvim-lua/plenary.nvim" },
 	},
 	{
-		'numToStr/Comment.nvim',
+		"numToStr/Comment.nvim",
 		opts = {
 			toggler = { -- Comments current line
-				line = '<C-_>',
-				block = '<C-b>'
+				line = "<C-_>",
+				block = "<C-b>",
 			},
 			opleader = { -- Can select block to comment
-				line = 'gc',
-				block = 'gb'
-			}
+				line = "gc",
+				block = "gb",
+			},
 		},
 		lazy = false,
-	}
+	},
 }
 
 -- Setting up lazy plugins
